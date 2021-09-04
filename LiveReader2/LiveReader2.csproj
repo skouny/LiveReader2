@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.WinForms.81.3.100\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.81.3.100\build\CefSharp.WinForms.props')" />
+  <Import Project="..\packages\CefSharp.Common.81.3.100\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.81.3.100\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.81.3.10\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.81.3.10\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.81.3.10\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.81.3.10\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FDB122D-F1ED-4C64-AB82-5BFBADF83D98}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LiveReader2</RootNamespace>
+    <AssemblyName>LiveReader2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\SourceCode\LiveReader2\Setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>index.htm</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>55</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LiveReader2.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\server-database.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0A7D09E2AA209854FBDAAF6C1506F26440324FDA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.12.3.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.12.3\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.24.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.24\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\LiveReader\LiveReader\MyDatabase.cs">
+      <Link>Classes\MyDatabase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\LiveReader\LiveReader\WebReaders\StandingsInfo.cs">
+      <Link>Classes\StandingsInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\play90\httpdocs\Classes\BetMixMaker.cs">
+      <Link>Classes\BetMixMaker.cs</Link>
+    </Compile>
+    <Compile Include="..\..\play90\httpdocs\Classes\Coupon.cs">
+      <Link>Classes\Coupon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\play90\httpdocs\Classes\GZip.cs">
+      <Link>Classes\GZip.cs</Link>
+    </Compile>
+    <Compile Include="..\..\play90\httpdocs\Classes\Lexicon.cs">
+      <Link>Classes\Lexicon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\play90\httpdocs\Classes\LiveFile.cs">
+      <Link>Classes\LiveFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\play90\httpdocs\Classes\LiveStatsInfo.cs">
+      <Link>Classes\LiveStatsInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\play90\httpdocs\Classes\MyTools.cs">
+      <Link>Classes\MyTools.cs</Link>
+    </Compile>
+    <Compile Include="..\..\play90\play90Worker\FormMaker.cs">
+      <Link>Classes\FormMaker.cs</Link>
+    </Compile>
+    <Compile Include="..\..\play90\play90Worker\MyURLs.cs">
+      <Link>Classes\MyURLs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\play90\play90Worker\WebLibrary\WeatherInfo.cs">
+      <Link>Classes\WeatherInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SportsManager\SportsManager\Classes\MatchGroup.cs">
+      <Link>Classes\MatchGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SportsManager\SportsManager\Classes\SourceMixer.cs">
+      <Link>Classes\SourceMixer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SportsManager\SportsManager\Classes\SportsDB.cs">
+      <Link>Classes\SportsDB.cs</Link>
+    </Compile>
+    <Compile Include="..\..\[Library]\Opap.cs">
+      <Link>Library\Opap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\[Library]\ResourceFile.cs">
+      <Link>Library\ResourceFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\[Library]\Settings.cs">
+      <Link>Library\Settings.cs</Link>
+    </Compile>
+    <Compile Include="..\..\[Library]\WebAuthenticator.cs">
+      <Link>Library\WebAuthenticator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\[Library]\XGZip.cs">
+      <Link>Library\XGZip.cs</Link>
+    </Compile>
+    <Compile Include="Classes\Score.cs" />
+    <Compile Include="Classes\TimedWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\XRequest.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewers.cs" />
+    <Compile Include="MessageText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageText.Designer.cs">
+      <DependentUpon>MessageText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPaths.cs" />
+    <Compile Include="MyReg.cs" />
+    <Compile Include="SofaScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SofaScores.Designer.cs">
+      <DependentUpon>SofaScores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SofaStandings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SofaStandings.Designer.cs">
+      <DependentUpon>SofaStandings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateManager.cs" />
+    <Compile Include="WebDB.cs" />
+    <Compile Include="WebReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebReader.Designer.cs">
+      <DependentUpon>WebReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebReaders\Football\Futbol24Football.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebReaders\Basket\NowGoalBasket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebReaders\Football\NowGoalFootball.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebReaders\Basket\OpapBasket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebReaders\Football\OpapFootball.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebReaders\WebReaderBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebReaders\WebReaderBase.Designer.cs">
+      <DependentUpon>WebReaderBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebReaderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebReaderControl.Designer.cs">
+      <DependentUpon>WebReaderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlFactory\MatchInfo.cs" />
+    <Compile Include="XmlFactory\OpapUpdater.cs" />
+    <Compile Include="XmlFactory\ServerIO.cs" />
+    <Compile Include="XmlFactory\StandingsUpdater.cs" />
+    <Compile Include="XmlFactory\TickerMaker.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageText.resx">
+      <DependentUpon>MessageText.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SofaScores.resx">
+      <DependentUpon>SofaScores.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SofaStandings.resx">
+      <DependentUpon>SofaStandings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebReader.resx">
+      <DependentUpon>WebReader.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebReaders\WebReaderBase.resx">
+      <DependentUpon>WebReaderBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebReaderControl.resx">
+      <DependentUpon>WebReaderControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\[Library]\UserScripts\FlashScore.js">
+      <Link>Library\UserScripts\FlashScore.js</Link>
+    </EmbeddedResource>
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\server-database.ico" />
+    <Content Include="Javascripts\Futbol24.js" />
+    <EmbeddedResource Include="Javascripts\ReadDay.js" />
+    <EmbeddedResource Include="Javascripts\ReadMatch.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Images\favicon.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.81.3.10\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.81.3.10\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.81.3.10\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.81.3.10\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.81.3.100\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.81.3.100\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.81.3.100\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.81.3.100\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.81.3.100\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.81.3.100\build\CefSharp.WinForms.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.81.3.100\build\CefSharp.WinForms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.81.3.100\build\CefSharp.WinForms.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.81.3.100\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.81.3.100\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.WinForms.81.3.100\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.81.3.100\build\CefSharp.WinForms.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

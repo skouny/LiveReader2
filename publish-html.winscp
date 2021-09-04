@@ -1,0 +1,16 @@
+# Automatically abort script on errors
+option batch abort
+# Disable overwrite confirmations that conflict with the previous
+option confirm off
+# Connect
+#open sftp://skouny:$k0un0864@livereader.ddns.net
+open ftp://skouny:Wqb78i%7@193.111.140.206
+# Force binary mode transfer
+option transfer binary
+# Mirror local files to remote and delete obsolete
+#synchronize remote -mirror -delete -filemask="|*/phpmyadmin/" .\LiveReader2Html\ /var/www/html/
+synchronize remote -mirror -delete .\LiveReader2Html\ /livereader.play90.gr/
+# Disconnect
+close
+# Exit
+exit

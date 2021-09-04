@@ -1,0 +1,102 @@
+#DivOptions {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 500px;
+    height: 24px;
+    border: 2px solid gray;
+    z-index: 2;
+}
+#DivCoupon {
+    position: fixed;
+    top: 28px;
+    bottom: 0px;
+    left: 0px;
+    right: 500px;
+    overflow: auto;
+    z-index: 1;
+}
+#DivTeams {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 500px;
+    z-index: 1;
+}
+body, select {
+    font-size: 11px;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 2px solid gray;
+}
+table {
+    table-layout: fixed;
+    white-space: nowrap;
+    border-collapse: collapse;
+}
+table, td, th, tr {
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+}
+button {
+    margin: 0px;
+    padding: 0px;
+}
+input {
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.row0 {
+    background-color: #B3B3B3;
+}
+.row1 {
+    background-color: #E6E6E6;
+}
+.row2 {
+    background-color: #CCCCCC;
+}
+.mixed-row {
+    font-weight: bold;
+}
+.deleteRow {
+    color: red;
+    font-weight: bold;
+}
+.FootballPairId, .BasketPairId {
+    text-align: center;
+}
+.FootballPairId1, .BasketPairId1 {
+    font-weight: bold;
+    text-align: center;
+    color: red;
+}
+.FootballPairId2 {
+    font-weight: bold;
+    text-align: center;
+    color: OrangeRed;
+}
+.FootballPairId3, .BasketPairId2 {
+    font-weight: bold;
+    text-align: center;
+    color: DarkOrange;
+}
+.FootballPairId4, .BasketPairId3 {
+    font-weight: bold;
+    text-align: center;
+    color: green;
+}
+.ui-menu {
+    width: 150px;
+    font-size: 11px;
+    float: right;
+}
+#menu {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}

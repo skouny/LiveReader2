@@ -1,0 +1,14 @@
+# Automatically abort script on errors
+option batch abort
+# Disable overwrite confirmations that conflict with the previous
+option confirm off
+# Connect
+open sftp://bitplanc:bmIkkCyyw@skouny.net
+# Force binary mode transfer
+option transfer binary
+# Mirror local files to remote and delete obsolete
+synchronize remote -mirror -delete .\Setup\ /home/bitplanc/livereader2.skouny.net/
+# Disconnect
+close
+# Exit
+exit

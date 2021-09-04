@@ -1,0 +1,11 @@
+[Alway in mind]
+=> reversed matches
+=> 
+
+[ToDo]
+=> Mixer
+=> replace CounrtyId with SourceId in champs table
+=> fix the width of table cell with input text in names
+=> 
+
+[Done]

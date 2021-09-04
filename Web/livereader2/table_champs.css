@@ -1,0 +1,14 @@
+body {
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+input {
+    font-size: 10px;
+}
+.colNames {
+    text-align: right;
+}
+.colId {
+    text-align: center;
+}

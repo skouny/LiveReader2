@@ -1,0 +1,14 @@
+[To Do List - client side]
+=> stop sportingbet if OT
+=> score paratasis kai penalty gia kathe source
+=> ReadStats -> there are more..
+=> clear browser cache before restart (kanontas restart xoris clear den ksekolaei to periexomeno)
+=> auto remove matches
+=> 
+
+
+[To Do List - server side]
+=> odd changes
+=> match ChampIds if same name in different champs
+=> score paratasis kai penalty ap to xml tou opap
+=> 
